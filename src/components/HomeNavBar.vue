@@ -1,8 +1,8 @@
 <template>
-  <div class="container-fluid nav-bar">
+  <div class="container-fluid nav-bar position-fixed">
           <div class="row justify-content-between h-100">
             <div class="col-4 col-md-5 h-100 py-2">
-                <img src="../assets/images/home-page/hbo-logo.svg" class="img-fluid h-100" v-once>
+                <img src="../assets/images/home-page/hbo-logo.svg" class="img-fluid h-100" v-once style="-webkit-filter: invert(100%)">
             </div>
             <div class="col-7 col-md-5">
                 <div class="row h-100 justify-content-end">
@@ -32,16 +32,16 @@ export default {
     .nav-bar 
         height: 53px
         background-color: rgba(0, 0, 0, 0.25)
+        z-index: 2
             
     .nav-bar__btn 
-        color: rgbb(248,249,250)
+        color: rgba(248,249,250)
         font-weight: 700
         letter-spacing: .2em
         text-transform: uppercase
 
     .nav-bar__second-btn
         background-color: #b535f6
-        color: #fff
         border: 2px solid transparent
         border-radius: 50rem
 </style>
