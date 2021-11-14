@@ -73,7 +73,19 @@
           <section-2-item :text="'Adicione seus títulos favoritos para assistir quando quiser'"/>
         </div>
     </section>
-    <section></section>
+    <section class="container">
+      <div class="row align-items-center py-3">
+        <div class="col">
+          <img src="https://hbomax-images.warnermediacdn.com/2021-05/ben10.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com&w=486" class="img-fluid" v-once>
+        </div>
+        <div class="col">
+          <h4 class="text-white text-center">A HBO Max traz diversão para a família toda</h4>
+        </div>
+        <div class="col">
+          <img src="https://hbomax-images.warnermediacdn.com/2021-05/fam_and_kids-looney_toons-img.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com&w=480" class="img-fluid" v-once>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
