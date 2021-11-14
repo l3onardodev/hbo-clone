@@ -57,18 +57,37 @@
         </div>
       </div>
     </section>
+    <section class="container-xl py-5">
+      <div class="row justify-content-center">
+        <p class="text-white text-center h4 fw-normal">Uma experiência simples e completa</p>
+        <p class="small-paragraph text-center">A compatibilidade varia de acordo com o plano.</p>
+
+        <img src="https://hbomax-images.warnermediacdn.com/2021-08/br_devices_trophy.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com&w=1007" class="img-fluid px-5" v-once>
+      </div>
+    </section>
+    <section class="container">
+        <div class="row py-5">
+          <section-2-item :text="'Crie até 5 perfis e receba recomendações personalizadas para cada um'"/>
+          <section-2-item :text="'Baixe qualquer conteúdo disponível para assistir offline'"/>
+          <section-2-item :text="'Defina o conteúdo que as crianças podem assistir de acordo com cada faixa etária'"/>
+          <section-2-item :text="'Adicione seus títulos favoritos para assistir quando quiser'"/>
+        </div>
+    </section>
+    <section></section>
   </div>
 </template>
 
 <script>
 import HomeNavBar from '../../components/HomeNavBar.vue'
 import HomeSliderItem from '../../components/HomeSliderItem.vue'
+import Section2Item from '../../components/Section2Item.vue'
 
 export default {
   name: 'App',
   components: {
     HomeNavBar,
     HomeSliderItem,
+    Section2Item
   },
 }
 </script>
@@ -79,6 +98,10 @@ export default {
 
   .letter-spacing 
     letter-spacing: 0.8px
+
+  .small-paragraph
+    color: rgba(255, 255, 255, 0.6)
+    font-size: 0.7rem
 
   .header__bottom-text
     color: rgba(255, 255, 255, 0.7)
