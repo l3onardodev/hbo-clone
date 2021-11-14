@@ -1,6 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VideoBackground from 'vue-responsive-video-background-player';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+
+import 'swiper/css/swiper.css'
+
+Vue.use(VueAwesomeSwiper, {
+  autoplay: 2000
+});
 
 Vue.component('video-background', VideoBackground);
 

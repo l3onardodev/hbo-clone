@@ -1,22 +1,12 @@
 <template>
   <div class="container-fluid nav-bar position-fixed">
-          <div class="row justify-content-between h-100">
-            <div class="col-4 col-md-5 h-100 py-2">
-                <img src="../assets/images/home-page/hbo-logo.svg" class="img-fluid h-100" v-once style="-webkit-filter: invert(100%)">
+          <div class="d-flex justify-content-between align-items-center h-100">
+            <div class="d-flex h-100 align-items-center px-1 py-1 py-md-0">
+                <img src="../assets/images/home-page/hbo-logo.svg" class="img-fluid py-1 py-md-0 h-50 h-md-75" v-once style="-webkit-filter: invert(100%)">
             </div>
-            <div class="col-7 col-md-5">
-                <div class="row h-100 justify-content-end">
-                    <div class="col h-100">
-                        <div class="row h-100 align-items-center">
-                            <button class="nav-bar__btn bg-transparent border-0">entrar</button>
-                        </div>
-                    </div>
-                    <div class="col-7 h-100">
-                        <div class="row h-100 align-items-center">
-                            <button class="w-auto nav-bar__btn nav-bar__second-btn px-md-4 py-1 py-md-2">experimente grátis</button>
-                        </div>
-                    </div>
-                </div>
+            <div>
+                <button class="nav-bar__btn bg-transparent border-0 px-3 px-md-4">entrar</button>
+                <button class="w-auto nav-bar__btn nav-bar__second-btn px-3 px-md-4 py-1 py-md-2">experimente grátis</button>
             </div>
       </div>
   </div>

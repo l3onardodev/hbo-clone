@@ -28,8 +28,33 @@
       </div>
     </header>
     <section class="container-fluid py-4">
-      <div class="row justify-content-center pt-5" style="border: 1px solid red">
-        <p class="fs-5 text-white text-center">Alerta de spoiler: a HBO Max tem novidades para você</p>
+      <div class="row pt-5" style="border: 1px solid red">
+        <div class="col-12">
+          <p class="fs-5 text-white text-center">Alerta de spoiler: a HBO Max tem novidades para você</p>
+        </div>
+        <div class="col-12">
+          <div class="row justify-content-center">
+            <div class="slider w-100" style="height: 200px;">
+              <div class="slider-track" style="height: 100px;">
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+
+                <home-slider-item :img_url="'https://hbomax-images.warnermediacdn.com/2021-09/pretty-little-liars.jpg?host=wme-hbomax-drupal-prod.s3.amazonaws.com'" :text="'em breve'"></home-slider-item>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -37,12 +62,14 @@
 
 <script>
 import HomeNavBar from '../../components/HomeNavBar.vue'
+import HomeSliderItem from '../../components/HomeSliderItem.vue'
 
 export default {
   name: 'App',
   components: {
     HomeNavBar,
-  }
+    HomeSliderItem,
+  },
 }
 </script>
 
@@ -57,4 +84,41 @@ export default {
     color: rgba(255, 255, 255, 0.7)
     font-size: 11px
     line-height: 14px
+
+  .slider
+    height: 250px
+    position: relative
+    width: 100%
+    display: grid
+    place-items: center
+    overflow: hidden
+
+    &::before,
+    &::after
+      content: ""
+      height: 250px
+      position: absolute
+      width: 200px
+      z-index: 2
+    
+    &::after 
+      right: 0
+      top: 0
+      transform: rotateZ(180deg)
+
+    &::before 
+      left: 0
+      top: 0
+
+  .slider-track
+    display: flex
+    width: calc(200px * 8)
+    animation: scrollSlider 20s linear infinite
+
+  @keyframes scrollSlider
+    from
+      transform: translateX(0)
+    to
+      transform: translateX(calc(-200px * 4))
+
 </style>
