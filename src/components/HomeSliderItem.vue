@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2" style="width: 200px">
+  <div class="px-2" :style="{ width: `${width}px` }">
       <img :src="img_url" class="w-100">
       <p class="fw-bold text-center text-uppercase">{{ text }}</p>
   </div>
@@ -15,7 +15,11 @@ export default {
         },
         text: {
             type: String,
-            required: true
+            required: false
+        },
+        width: {
+            type: Number,
+            required: true, 
         }
     }
 }
