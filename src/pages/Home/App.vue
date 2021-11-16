@@ -86,6 +86,16 @@
         </div>
       </div>
     </section>
+    <section class="container p-0 py-3">
+      <swiper :options="swiperOptions">
+        <swiper-slide class="swiper-slide-style">
+        </swiper-slide>
+        <swiper-slide class="swiper-slide-style">Slide 2</swiper-slide>
+        <swiper-slide class="swiper-slide-style">Slide 3</swiper-slide>
+        ...
+      </swiper>
+    </section>
+
     <section class="container-fluid py-3 section-experimente-gratis-background">
       <div class="container py-4">
         <div class="col">
@@ -157,9 +167,9 @@
         <div class="col py-4">
           <questions-section-item :text="'Receberei um período de teste gratuito para se comprar desde HBOMAX.COM?'" :sub_text="'Começando no 1 de agosto de 2021, todos os nossos novos assinantes através de HBOMAX.COM receberão um período de teste gratuito de 7 dias. Este período de teste e suas condições serão anunciados no momento em que você iniciar o processo de compra. Lembre-se de que o período de teste só será oferecido para novas contas. Se você já tinha uma conta no HBO Max e vai criar uma nova, o período de teste não será oferecido e o sistema passará a cobrar pelo serviço a partir do primeiro dia de assinatura.'"/>
           
-          <questions-section-item :text="'Receberei um período de teste gratuito para se comprar desde HBOMAX.COM?'" :sub_text="'Se uma assinatura ou oferta promocional inclui um período de teste gratuito, os critérios de qualificação são mencionados no momento em que você inicia o processo de assinatura. Você está qualificado para um período de teste se nunca tiver criado uma assinatura da HBO Max antes. Se, em algum momento no passado, você teve uma assinatura ou iniciou um processo de assinatura na HBO Max, é possível que você não poda se qualificar para um período de teste gratuito. Os critérios de elegibilidade para um período de teste são mencionados no momento em que você cria sua assinatura.'"/>
+          <questions-section-item :text="'Quem é elegível para um período de teste gratuito?'" :sub_text="'Se uma assinatura ou oferta promocional inclui um período de teste gratuito, os critérios de qualificação são mencionados no momento em que você inicia o processo de assinatura. Você está qualificado para um período de teste se nunca tiver criado uma assinatura da HBO Max antes. Se, em algum momento no passado, você teve uma assinatura ou iniciou um processo de assinatura na HBO Max, é possível que você não poda se qualificar para um período de teste gratuito. Os critérios de elegibilidade para um período de teste são mencionados no momento em que você cria sua assinatura.'"/>
           
-          <questions-section-item :text="'Receberei um período de teste gratuito para se comprar desde HBOMAX.COM?'" :sub_text="'Durante o período de teste gratuito, você terá acesso ilimitado a todo o conteúdo da HBO Max'"/>
+          <questions-section-item :text="'Que conteúdo posso produzir?  '" :sub_text="'Durante o período de teste gratuito, você terá acesso ilimitado a todo o conteúdo da HBO Max'"/>
         </div>
       </div>
     </section>
@@ -175,6 +185,13 @@ import QuestionsSectionItem from '../../components/QuestionsSectionItem.vue'
 
 export default {
   name: 'App',
+  data() {
+    return {
+      swiperOptions: {
+        slidesPerView: 1
+      }
+    }
+  },
   components: {
     HomeNavBar,
     HomeSliderItem,
@@ -270,5 +287,12 @@ export default {
       transform: translateX(0)
     to
       transform: translateX(calc(-200px * 4))
+
+  .swiper-slide-style
+    width: 80%
+    height: 425px
+    color: white
+    background-image: url('https://cdn.optimizely.com/img/15506560068/1a7ef7842f234b4aaef3da3ed4fdc0c2.png')
+    border: 1px solid red
 
 </style>
