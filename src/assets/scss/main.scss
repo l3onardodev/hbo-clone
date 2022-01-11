@@ -30,7 +30,7 @@ $font-family-base: 'Roboto', sans-serif;
 
 $blue:    #030328;
 $indigo:  #b535f6;
-$purple:  #6f42c1 !default;
+$purple:  #9e86ff;
 $pink:    #d63384 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
@@ -61,7 +61,7 @@ $colors: (
 $primary:       $indigo;
 $secondary:     $blue;
 $success:       $white;
-$info:          $cyan !default;
+$info:          $purple;
 $warning:       $yellow !default;
 $danger:        $red !default;
 // scss-docs-end theme-color-variables
@@ -74,6 +74,7 @@ $theme-colors: (
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
+  "indigo":     $indigo,
 );
 // scss-docs-end theme-colors-map
 

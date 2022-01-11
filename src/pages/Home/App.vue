@@ -185,96 +185,17 @@
         </div>
       </div>
     </section>
-    <section class="container p-0 py-3">
+    <section class="container p-0 py-5">
       <swiper :options="swiperOptions">
         <swiper-slide class="swiper-slide-style">
-          <div class="row justify-content-center" style="padding: 0 3em">
-            <div class="col-12">
-              <b-img
-                src="https://cdn.optimizely.com/img/15506560068/00ed2d2a95e1485b8ff9e428f54e8262.png"
-                fluid
-                center
-              ></b-img>
-            </div>
-            <div class="row justify-content-center align-items-center carrousel-bg-color rounded mb-5 py-4">
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 col-md-3">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-              <div class="col-4 d-block d-md-none">
-                <b-img
-                  src="https://cdn.optimizely.com/img/15506560068/d0b1ed27e4fd42509abd9f26c207af90.png"
-                  fluid
-                  center
-                  class="w-100"
-                ></b-img>
-              </div>
-            </div>
-          </div>
+          <swiper-item/>
         </swiper-slide>
-        <swiper-slide class="swiper-slide-style">Slide 2</swiper-slide>
-        <swiper-slide class="swiper-slide-style">Slide 3</swiper-slide>
-        ...
+        <swiper-slide class="swiper-slide-style">
+          <swiper-item/>
+        </swiper-slide>
+        <swiper-slide class="swiper-slide-style">
+          <swiper-item/>
+        </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
       </swiper>
@@ -391,7 +312,7 @@
         <h4 class="text-white fw-semi-bold text-center">
           Assista a HBO Max em seus dispositivos preferidos
         </h4>
-        <p class="text-white letter-spacing text-center small-paragraph">
+        <p class="text-gray letter-spacing text-center small-paragraph">
           A compatibilidade varia de acordo com o plano.
         </p>
       </div>
@@ -450,6 +371,16 @@
         </div>
       </div>
     </section>
+    <footer>
+      <div class="d-flex flex-column align-items-center">
+        <div class="d-flex">
+          <a href="" class="text-uppercase text-info text-decoration-none mx-4">em breve</a>
+          <a href="" class="text-uppercase text-info text-decoration-none mx-4">filme em destaque</a>
+          <a href="" class="text-uppercase text-info text-decoration-none mx-4">séries</a>
+          <a href="" class="text-uppercase text-info text-decoration-none mx-4">ajuda</a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -459,6 +390,7 @@ import HomeSliderItem from "../../components/HomeSliderItem.vue";
 import Section2Item from "../../components/Section2Item.vue";
 import DevicesSectionItem from "../../components/DevicesSectionItem.vue";
 import QuestionsSectionItem from "../../components/QuestionsSectionItem.vue";
+import SwiperItem from '../../components/SwiperItem.vue';
 
 export default {
   name: "App",
@@ -482,11 +414,14 @@ export default {
     Section2Item,
     DevicesSectionItem,
     QuestionsSectionItem,
+    SwiperItem
   },
 };
 </script>
 
 <style lang="sass" scoped>
+@import '../../assets/scss/main.scss'
+
 .section-experimente-gratis-background
   background-image: url('https://hbomax-images.warnermediacdn.com/2021-07/promo-banner-bg-dsk.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com&w=1400')
   background-repeat: no-repeat
@@ -577,8 +512,20 @@ export default {
   height: auto
   color: white
   background-image: url('https://cdn.optimizely.com/img/15506560068/1a7ef7842f234b4aaef3da3ed4fdc0c2.png')
-  border: 1px solid red
 
-.carrousel-bg-color
-  background-color: rgba(255, 255, 255, 0.1)
+.swiper-button-prev, .swiper-button-next
+  color: $indigo
+  top: 10%
+
+.swiper-button-prev
+  left: 20vw
+
+  @include media-breakpoint-up(md)
+    left: 30vw
+
+.swiper-button-next
+  right: 20vw
+
+  @include media-breakpoint-up(md)
+    right: 30vw
 </style>
