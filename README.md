@@ -1,4 +1,4 @@
-# hbo-clone
+# hbo-clone (not done yet)
 
 ## Project setup
 ```
